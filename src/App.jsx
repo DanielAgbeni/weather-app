@@ -5,6 +5,7 @@ import Search from './component/search/Search'
 import { WEATHER_API_KEY, WEATHER_API_URL } from './api'
 import { useState } from 'react'
 import Forecast from './component/Forecast'
+import Ads from './component/Ads'
 
 function App() {
 	const [currentWeather, setCurrentWeather] = useState(null)
@@ -33,6 +34,7 @@ function App() {
 			<Search onSearchData={handleOnSearchChange} />
 			{currentWeather && <CurrentWeather data={currentWeather} />}
 			{forecast && <Forecast data={forecast} />}
+			<Ads dataAdSlot='3346482597' />
 		</div>
 	)
 }
